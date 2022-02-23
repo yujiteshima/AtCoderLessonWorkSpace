@@ -1,19 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main () {
+    int n;
+    cin >> n;
     int count = 1;
     while (true)
     {
-        int a;
-        cin >> a;
-        if (a == 0)
+        // check_num
+        if (count % 3 == 0)
         {
+            cout << " " << count;
+        }
+        // include3
+        else if(count % 10 == 3) {
+            cout << " " << count;
+        }
+        ++count;
+        if(count > n){
             break;
         }
-        cout << "Case " << count << ": " << a << endl;
-        ++count;
     }
+    cout << endl;
     return 0;
 }
