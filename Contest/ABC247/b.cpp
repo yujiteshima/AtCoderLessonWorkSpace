@@ -39,7 +39,6 @@ int main () {
                 }
                 if (s[i] == item.first)
                 {
-                    
                     s[i] = "";
                 }
                 if(t[i] == item.first){
