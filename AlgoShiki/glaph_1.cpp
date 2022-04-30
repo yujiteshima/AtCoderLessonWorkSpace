@@ -10,7 +10,7 @@ int main()
     {
         cin >> S[i];
     }
-    if (S[A][B] = 'o')
+    if (S[A][B] == 'o')
     {
         cout << "Yes" << endl;
     }
