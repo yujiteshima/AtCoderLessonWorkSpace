@@ -10,8 +10,9 @@ const int mod = 1'000'000'007; // mod(10^9 + 7)
 using Graph = vector<vector<int>>;
 
 int main () {
-  int r;
-  cin >> r;
-  cout << r * r << endl;
+  map<string, int> d = {{"SUN", 7}, {"MON", 6}, {"TUE", 5}, {"WED", 4}, {"THU", 3}, {"FRI", 2}, {"SAT", 1}};
+  string s;
+  cin >> s;
+  cout << d[s] << endl;
   return 0;
 }

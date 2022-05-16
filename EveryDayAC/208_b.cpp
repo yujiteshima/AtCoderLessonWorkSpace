@@ -10,8 +10,19 @@ const int mod = 1'000'000'007; // mod(10^9 + 7)
 using Graph = vector<vector<int>>;
 
 int main () {
-  int r;
-  cin >> r;
-  cout << r * r << endl;
+  vector<ll> m = {0, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800};
+  int p;
+  cin >> p;
+  int ans = 0;
+  int i = 10;
+  while (p != 0) {
+      if(p >= m[i]){
+        p -= m[i];
+        ans++;
+      }else{
+        --i;
+      }
+  }
+  cout << ans << endl;
   return 0;
 }
