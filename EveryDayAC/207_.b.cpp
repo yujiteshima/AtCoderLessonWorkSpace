@@ -11,23 +11,21 @@ const int mod = 1'000'000'007;  // mod(10^9 + 7)
 using Graph = vector<vector<int>>;
 
 int main() {
-  int a, b, c, d;
+  long long a, b, c, d;
   cin >> a >> b >> c >> d;
-  int ans = 0;
-  int mizuiro = a;
-  int akairo = 0;
-  if (b > c * d) {
-    cout << -1 << endl;
-  } else {
-    while (true) {
-      if (mizuiro <= akairo * d) {
-        break;
-      }
-      mizuiro += b;
-      akairo += c;
-      ans++;
+
+  if (c * d > b) {
+    bool flag = true;
+    int i = 1;
+    while (flag) {
+      //a += b;
+      if ((a + b * i)<= d * i * c) break;
+      i++;
     }
-    cout << ans << endl;
-  }
+    cout << i << endl;
+    return 0;
+  } else
+    cout << -1 << endl;
+
   return 0;
 }
