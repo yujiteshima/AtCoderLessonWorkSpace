@@ -5,27 +5,41 @@ const ll INF = 1LL << 60;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 
 int main () {
-    int H, W, X, Y;
-    cin >> H >> W >> X >> Y;
-    vector<vector<string>> S(H, vector<string>(W));
-    for (int i = 0; i < H; i++)
-    {
-        for (int j = 0; j < W; j++)
-        {
-            cin >> S[i][j];
-        }
-    }
+    int h, w, x, y;
+    cin >> h >> w >> x >> y;
+    vector<string> S(h);
+    rep(i, h) cin >> S[i];
+
     int ans = 0;
-    X -= 1;
-    Y -= 1;
     // 上
-    for (int i = X; i < H; i++)
+    for (int i = x-1; i >= 0; i--)
     {
-        if(S[i][Y] == "#"){
+        if(S[i][y] == '#'){
             break;
         }
         ans++;
     }
-    
+    // 下
+    for (int i = x - 1; i < h; i++) {
+      if (S[i][y] == '#') {
+        break;
+      }
+      ans++;
+    }
+    // 左
+    for (int i = y - 1; i >= 0; i--){
+        if(S[x][i] == '#') {
+          break;
+        }
+        ans++;
+    }
+    // 右
+    for (int i = y - 1; i < w; i++) {
+      if (S[x][i] == '#') {
+        break;
+      }
+      ans++;
+    }
+    cout << ans << endl;
     return 0;
 }
