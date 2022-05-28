@@ -13,11 +13,11 @@ using Graph = vector<vector<int>>;
 int main() {
   int n, q;
   cin >> n >> q;
-  vector<vector<ll>> A(n + 10);
+  vector<vector<ll>> A(1000000009);
   rep(i, n) {
-    ll tmp;
-    cin >> tmp;
-    A[tmp].push_back(i+1);
+    ll a;
+    cin >> a;
+    A[a].push_back(i+1);
   }
   rep(i, A.size()) { cout << A[1][i] << " "; }
   cout << endl;
