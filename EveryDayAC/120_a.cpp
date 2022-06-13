@@ -10,14 +10,18 @@ const int mod = 1'000'000'007; // mod(10^9 + 7)
 using Graph = vector<vector<int>>;
 template<class T> void chmin(T& a, T b) { if (a > b) a = b; }
 template<class T> void chmax(T& a, T b) { if (a < b) a = b; }
+template<class T> T calc_dist(T x1, T y1, T x2, T y2){ return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2); }
 
 int main () {
-  int x1, y1, x2, y2;
-  cin >> x1 >> y1 >> x2 >> y2;
-  int dx = abs(x1 - x2);
-  int dy = y1 + y2;
-  double slope = 1.0 * dy / dx;
-  cout << fixed << setprecision(15)
-       << 1.0 * x1 + (x1 < x2 ? 1.0 : -1.0) * y1 / slope << endl;
+  int a, b, c;
+  cin >> a >> b >> c;
+  int ans = 0;
+  while(1){
+    if (b < a) break;
+    if (ans >= c) break;
+    b -= a;
+    ++ans;
+  }
+  cout << ans << endl;
   return 0;
 }
