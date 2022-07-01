@@ -28,18 +28,18 @@ int main() {
     string tmp;
     cin >> tmp;
     if (i != 0) {
-     // cout << ex_char << ":" << tmp[0] << endl;
+      // cout << ex_char << ":" << tmp[0] << endl;
       if (ex_char != tmp[0]) {
         ans = "No";
       }
     }
-    //cout << i << ":" << se.size() << endl;
-    if (se.size() != i) {
-      ans = "No";
-    }
+    // cout << i << ":" << se.size() << endl;
     se.insert(tmp);
-    //cout << i << ":" << tmp.back() << endl;
-    ex_char = tmp[tmp.size()-1];
+    // cout << i << ":" << tmp.back() << endl;
+    ex_char = tmp[tmp.size() - 1];
+  }
+  if (se.size() != n) {
+    ans = "No";
   }
   cout << ans << endl;
   return 0;
