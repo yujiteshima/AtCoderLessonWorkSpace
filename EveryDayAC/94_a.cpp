@@ -26,9 +26,9 @@ int main() {
   int a, b, x;
   cin >> a >> b >> x;
   if (x >= a and x <= a + b) {
-    cout << "Yes" << endl;
+    cout << "YES" << endl;
   } else {
-    cout << "No" << endl;
+    cout << "NO" << endl;
   }
 
   return 0;
